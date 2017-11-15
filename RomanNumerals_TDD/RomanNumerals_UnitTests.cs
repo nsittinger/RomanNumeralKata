@@ -21,19 +21,27 @@ namespace RomanNumerals_TDD
         [TestMethod]
         public void IfNumberIsTwoDigitsTest()
         {
-            Assert.AreEqual("X", romanNumerals.ConvertDoubleDigitToRomanNumerals(10));
+            Assert.AreEqual("X", romanNumerals.ConvertDoubleDigitsToRomanNumerals(10));
 
-            Assert.AreEqual("XIV", romanNumerals.ConvertDoubleDigitToRomanNumerals(14));
+            Assert.AreEqual("XIV", romanNumerals.ConvertDoubleDigitsToRomanNumerals(14));
 
-            Assert.AreEqual("XL", romanNumerals.ConvertDoubleDigitToRomanNumerals(40));
+            Assert.AreEqual("XL", romanNumerals.ConvertDoubleDigitsToRomanNumerals(40));
         }
 
         [TestMethod]
         public void IfNumberIsThreeDigitsTest()
         {
-            Assert.AreEqual("CDXLVIII", romanNumerals.ConvertTripleDigitToRomanNumerals(448));
-            Assert.AreEqual("DII", romanNumerals.ConvertTripleDigitToRomanNumerals(502));
-            Assert.AreEqual("CXIV", romanNumerals.ConvertTripleDigitToRomanNumerals(114));
+            Assert.AreEqual("CDXLVIII", romanNumerals.ConvertTripleDigitsToRomanNumerals(448));
+            Assert.AreEqual("DII", romanNumerals.ConvertTripleDigitsToRomanNumerals(502));
+            Assert.AreEqual("CXIV", romanNumerals.ConvertTripleDigitsToRomanNumerals(114));
+        }
+
+        [TestMethod]
+        public void IfNumberIsFourDigitsTest()
+        {
+            Assert.AreEqual("MCDXIV", romanNumerals.ConvertQuadrupalDigitsToRomanNumerals(1414));
+            Assert.AreEqual("MCCVI", romanNumerals.ConvertQuadrupalDigitsToRomanNumerals(1206));
+            Assert.AreEqual("MCXXII", romanNumerals.ConvertQuadrupalDigitsToRomanNumerals(1122));
         }
     }
 }

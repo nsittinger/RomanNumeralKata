@@ -55,7 +55,7 @@ namespace RomanNumerals
             return result;
         }
 
-        public string ConvertDoubleDigitToRomanNumerals(int num)
+        public string ConvertDoubleDigitsToRomanNumerals(int num)
         {
             string nString = num.ToString();
             string result = "";
@@ -71,7 +71,7 @@ namespace RomanNumerals
             return result;
         }
 
-        public string ConvertTripleDigitToRomanNumerals(int num)
+        public string ConvertTripleDigitsToRomanNumerals(int num)
         {
             string nString = num.ToString();
             string result = "";
@@ -87,6 +87,32 @@ namespace RomanNumerals
             int nThirdIndex = int.Parse(nString[2].ToString());
 
             result += newDictionary[nThirdIndex];
+
+            return result;
+        }
+
+        public string ConvertQuadrupalDigitsToRomanNumerals(int num)
+        {
+            string nString = num.ToString();
+            string result = "";
+
+            int nFirstIndex = int.Parse(nString[0].ToString()) * 1000;
+
+            result += newDictionary[nFirstIndex];
+
+            int nSecondIndex = int.Parse(nString[1].ToString()) * 100;
+
+            result += newDictionary[nSecondIndex];
+
+            int nThirdIndex = int.Parse(nString[2].ToString()) * 10;
+
+            result += newDictionary[nThirdIndex];
+
+            int nFourthIndex = int.Parse(nString[3].ToString());
+
+            result += newDictionary[nFourthIndex];
+
+            return result;
 
             return result;
         }
