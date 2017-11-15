@@ -43,76 +43,62 @@ namespace RomanNumerals
                 {3000, "MMM" },
             };
         
-        public string ConvertSingleDigitToRomanNumerals(int num)
+        public string ConvertNumbersToRomanNumerals(int num)
         {
             string nString = num.ToString();
             string result = "";
 
-            int nFirstIndex = int.Parse(nString[0].ToString());
+            if (nString.Length == 1)
+            {
+                int nFirstIndex = int.Parse(nString[0].ToString());
 
-            result += newDictionary[nFirstIndex];
+                result += newDictionary[nFirstIndex];
+            }
 
-            return result;
-        }
+            else if(nString.Length == 2)
+            {
+                int nFirstIndex = int.Parse(nString[0].ToString()) * 10;
 
-        public string ConvertDoubleDigitsToRomanNumerals(int num)
-        {
-            string nString = num.ToString();
-            string result = "";
+                result += newDictionary[nFirstIndex];
 
-            int nFirstIndex = int.Parse(nString[0].ToString()) * 10;
+                int nSecondIndex = int.Parse(nString[1].ToString());
 
-            result += newDictionary[nFirstIndex];
+                result += newDictionary[nSecondIndex];
+            }
 
-            int nSecondIndex = int.Parse(nString[1].ToString());
+            else if (nString.Length == 3)
+            {
+                int nFirstIndex = int.Parse(nString[0].ToString()) * 100;
 
-            result += newDictionary[nSecondIndex];
+                result += newDictionary[nFirstIndex];
 
-            return result;
-        }
+                int nSecondIndex = int.Parse(nString[1].ToString()) * 10;
 
-        public string ConvertTripleDigitsToRomanNumerals(int num)
-        {
-            string nString = num.ToString();
-            string result = "";
+                result += newDictionary[nSecondIndex];
 
-            int nFirstIndex = int.Parse(nString[0].ToString()) * 100;
+                int nThirdIndex = int.Parse(nString[2].ToString());
 
-            result += newDictionary[nFirstIndex];
+                result += newDictionary[nThirdIndex];
+            }
 
-            int nSecondIndex = int.Parse(nString[1].ToString()) * 10;
+            else if (nString.Length == 4)
+            {
+                int nFirstIndex = int.Parse(nString[0].ToString()) * 1000;
 
-            result += newDictionary[nSecondIndex];
+                result += newDictionary[nFirstIndex];
 
-            int nThirdIndex = int.Parse(nString[2].ToString());
+                int nSecondIndex = int.Parse(nString[1].ToString()) * 100;
 
-            result += newDictionary[nThirdIndex];
+                result += newDictionary[nSecondIndex];
 
-            return result;
-        }
+                int nThirdIndex = int.Parse(nString[2].ToString()) * 10;
 
-        public string ConvertQuadrupalDigitsToRomanNumerals(int num)
-        {
-            string nString = num.ToString();
-            string result = "";
+                result += newDictionary[nThirdIndex];
 
-            int nFirstIndex = int.Parse(nString[0].ToString()) * 1000;
+                int nFourthIndex = int.Parse(nString[3].ToString());
 
-            result += newDictionary[nFirstIndex];
-
-            int nSecondIndex = int.Parse(nString[1].ToString()) * 100;
-
-            result += newDictionary[nSecondIndex];
-
-            int nThirdIndex = int.Parse(nString[2].ToString()) * 10;
-
-            result += newDictionary[nThirdIndex];
-
-            int nFourthIndex = int.Parse(nString[3].ToString());
-
-            result += newDictionary[nFourthIndex];
-
-            return result;
+                result += newDictionary[nFourthIndex];
+            }
 
             return result;
         }
