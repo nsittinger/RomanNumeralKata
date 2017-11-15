@@ -43,5 +43,12 @@ namespace RomanNumerals_TDD
             Assert.AreEqual("MCCVI", romanNumerals.ConvertNumbersToRomanNumerals(1206));
             Assert.AreEqual("MCXXII", romanNumerals.ConvertNumbersToRomanNumerals(1122));
         }
+
+        [TestMethod]
+        public void ConfirmLengthIsLessThanFive()
+        {
+            Assert.AreEqual(true, romanNumerals.ConfirmCorrectNumberOfDigits(123));
+            Assert.AreEqual(false, romanNumerals.ConfirmCorrectNumberOfDigits(12345));
+        }
     }
 }

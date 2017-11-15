@@ -102,5 +102,27 @@ namespace RomanNumerals
 
             return result;
         }
+
+        public bool ConfirmCorrectNumberOfDigits(int num)
+        {
+            bool lengthPass = true;
+            bool numberPass = true;
+            bool pass = true;
+
+            if (num.ToString().Length < 0 || num.ToString().Length > 4)
+            {
+                lengthPass = false;
+            }
+            if (num < 0)
+            {
+                numberPass = false;
+            }
+            if (!lengthPass || !numberPass)
+            {
+                pass = false;
+            }
+
+            return pass;
+        }
     }
 }

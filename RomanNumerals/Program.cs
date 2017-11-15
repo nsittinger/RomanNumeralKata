@@ -10,6 +10,10 @@ namespace RomanNumerals
     {
         static void Main(string[] args)
         {
+            RomanNumeralModel romanNumeralModel = new RomanNumeralModel();
+            CLI myCLI = new CLI(romanNumeralModel);
+
+            myCLI.Running();
         }
     }
 }
