@@ -27,5 +27,13 @@ namespace RomanNumerals_TDD
 
             Assert.AreEqual("XL", romanNumerals.ConvertDoubleDigitToRomanNumerals(40));
         }
+
+        [TestMethod]
+        public void IfNumberIsThreeDigitsTest()
+        {
+            Assert.AreEqual("CDXLVIII", romanNumerals.ConvertTripleDigitToRomanNumerals(448));
+            Assert.AreEqual("DII", romanNumerals.ConvertTripleDigitToRomanNumerals(502));
+            Assert.AreEqual("CXIV", romanNumerals.ConvertTripleDigitToRomanNumerals(114));
+        }
     }
 }
