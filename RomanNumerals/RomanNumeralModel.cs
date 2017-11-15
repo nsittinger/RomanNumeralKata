@@ -40,7 +40,7 @@ namespace RomanNumerals
                 {900, "CM" },
                 {1000, "M" },
                 {2000, "MM" },
-                {3000, "MMM" },
+                {3000, "MMM" }
             };
         
         public string ConvertNumbersToRomanNumerals(int num)
@@ -105,19 +105,9 @@ namespace RomanNumerals
 
         public bool ConfirmCorrectNumberOfDigits(int num)
         {
-            bool lengthPass = true;
-            bool numberPass = true;
             bool pass = true;
 
-            if (num.ToString().Length < 0 || num.ToString().Length > 4)
-            {
-                lengthPass = false;
-            }
-            if (num < 0)
-            {
-                numberPass = false;
-            }
-            if (!lengthPass || !numberPass)
+            if(num < 1 || num > 3000)
             {
                 pass = false;
             }

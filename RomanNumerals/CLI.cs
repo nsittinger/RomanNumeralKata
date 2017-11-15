@@ -28,8 +28,10 @@ namespace RomanNumerals
         public bool PromptForNumber()
         {
             
-            Console.WriteLine("Please insert a number. (Max 4 digits)");
-            int input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please insert a positive number! (Max: 3000)");
+            string answer = Console.ReadLine();
+            int input = 0;
+            bool isNumber = int.TryParse(answer, out input);
 
             bool running = true;
             while(running)
@@ -47,15 +49,8 @@ namespace RomanNumerals
 
             bool running = true;
 
-            if(correctNumberOfDigits)
-            {
-                Console.WriteLine();
-                Console.WriteLine(input + " in Roman Numerals is " + romanNumeralOutput);
-                Console.WriteLine();
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
-            }
-            else
+
+            if (!correctNumberOfDigits)
             {
                 Console.WriteLine();
                 Console.WriteLine("Incorrect number input");
@@ -63,6 +58,15 @@ namespace RomanNumerals
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine(input + " in Roman Numerals is " + romanNumeralOutput);
+                Console.WriteLine();
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+            }
+            
             while (running)
             {
                 running = RepeatMenu();
@@ -75,7 +79,7 @@ namespace RomanNumerals
         {
             bool running = true;
 
-            Console.WriteLine("Repeat calculation? (y/n)");
+            Console.WriteLine("Try Again? (y/n)");
             string input = Console.ReadLine().ToLower();
 
             if (input == "y")
