@@ -8,3 +8,12 @@ C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\R
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.csproj.CoreCompileInputs.cache
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.dll
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.pdb
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\bin\Debug\RomanNumerals_TDD.dll
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\bin\Debug\RomanNumerals_TDD.pdb
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\bin\Debug\RomanNumerals.exe
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\bin\Debug\RomanNumerals.pdb
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\bin\Debug\RomanNumerals.exe.config
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.csprojResolveAssemblyReference.cache
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.csproj.CoreCompileInputs.cache
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.dll
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals_TDD\obj\Debug\RomanNumerals_TDD.pdb

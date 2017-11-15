@@ -5,3 +5,10 @@ C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals\obj\Debug\Roman
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.csproj.CoreCompileInputs.cache
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.exe
 C:\Users\nsittinger\source\repos\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.pdb
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\bin\Debug\RomanNumerals.exe.config
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\bin\Debug\RomanNumerals.exe
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\bin\Debug\RomanNumerals.pdb
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.csprojResolveAssemblyReference.cache
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.csproj.CoreCompileInputs.cache
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.exe
+C:\Users\nsittinger\RomanNumerals_TDD\RomanNumerals\obj\Debug\RomanNumerals.pdb

@@ -54,5 +54,21 @@ namespace RomanNumerals
 
             return result;
         }
+
+        public string ConvertDoubleDigitToRomanNumerals(int num)
+        {
+            string nString = num.ToString();
+            string result = "";
+
+            int nFirstIndex = int.Parse(nString[0].ToString()) * 10;
+
+            result += newDictionary[nFirstIndex];
+
+            int nSecondIndex = int.Parse(nString[1].ToString());
+
+            result += newDictionary[nSecondIndex];
+
+            return result;
+        }
     }
 }

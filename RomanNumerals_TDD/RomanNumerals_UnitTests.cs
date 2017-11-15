@@ -16,7 +16,16 @@ namespace RomanNumerals_TDD
             Assert.AreEqual("VIII", romanNumerals.ConvertSingleDigitToRomanNumerals(8));
             Assert.AreEqual("V", romanNumerals.ConvertSingleDigitToRomanNumerals(5));
             Assert.AreEqual("III", romanNumerals.ConvertSingleDigitToRomanNumerals(3));
+        }
 
+        [TestMethod]
+        public void IfNumberIsTwoDigitsTest()
+        {
+            Assert.AreEqual("X", romanNumerals.ConvertDoubleDigitToRomanNumerals(10));
+
+            Assert.AreEqual("XIV", romanNumerals.ConvertDoubleDigitToRomanNumerals(14));
+
+            Assert.AreEqual("XL", romanNumerals.ConvertDoubleDigitToRomanNumerals(40));
         }
     }
 }
