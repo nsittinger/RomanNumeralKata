@@ -44,12 +44,10 @@ namespace RomanNumerals
 
         public bool NumberToRomanNumeralMethod(int input)
         {
-            string romanNumeralOutput = romanNumeralModel.ConvertNumbersToRomanNumerals(input);
             bool correctNumberOfDigits = romanNumeralModel.ConfirmCorrectNumberOfDigits(input);
-
+            
             bool running = true;
-
-
+            
             if (!correctNumberOfDigits)
             {
                 Console.WriteLine();
@@ -60,6 +58,7 @@ namespace RomanNumerals
             }
             else
             {
+                string romanNumeralOutput = romanNumeralModel.ConvertNumbersToRomanNumerals(input);
                 Console.WriteLine();
                 Console.WriteLine(input + " in Roman Numerals is " + romanNumeralOutput);
                 Console.WriteLine();
