@@ -66,7 +66,7 @@ namespace RomanNumerals
             else
             {
                 Console.WriteLine();
-                Console.WriteLine(input + " in Arabic Numerals is " + arabicNumeralOutput);
+                Console.WriteLine(input.ToUpper() + " in Arabic Numerals is " + arabicNumeralOutput);
                 Console.WriteLine();
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
