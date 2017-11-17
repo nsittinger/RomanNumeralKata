@@ -8,7 +8,8 @@ namespace RomanNumerals
 {
     public class RomanNumeralModel
     {
-        Dictionary<int, string> newDictionary = new Dictionary<int, string>()
+        //NUMBER TO ROMAN NUMERAL METHODS
+        Dictionary<int, string> numberToRomanDictionary = new Dictionary<int, string>()
             {
                 {0, "" },
                 {1, "I" },
@@ -42,7 +43,6 @@ namespace RomanNumerals
                 {2000, "MM" },
                 {3000, "MMM" }
             };
-        
         public string ConvertNumbersToRomanNumerals(int num)
         {
             string nString = num.ToString();
@@ -52,52 +52,135 @@ namespace RomanNumerals
             {
                 int nFirstIndex = int.Parse(nString[0].ToString());
 
-                result += newDictionary[nFirstIndex];
+                result += numberToRomanDictionary[nFirstIndex];
             }
 
             else if(nString.Length == 2)
             {
                 int nFirstIndex = int.Parse(nString[0].ToString()) * 10;
 
-                result += newDictionary[nFirstIndex];
+                result += numberToRomanDictionary[nFirstIndex];
 
                 int nSecondIndex = int.Parse(nString[1].ToString());
 
-                result += newDictionary[nSecondIndex];
+                result += numberToRomanDictionary[nSecondIndex];
             }
 
             else if (nString.Length == 3)
             {
                 int nFirstIndex = int.Parse(nString[0].ToString()) * 100;
 
-                result += newDictionary[nFirstIndex];
+                result += numberToRomanDictionary[nFirstIndex];
 
                 int nSecondIndex = int.Parse(nString[1].ToString()) * 10;
 
-                result += newDictionary[nSecondIndex];
+                result += numberToRomanDictionary[nSecondIndex];
 
                 int nThirdIndex = int.Parse(nString[2].ToString());
 
-                result += newDictionary[nThirdIndex];
+                result += numberToRomanDictionary[nThirdIndex];
             }
 
             else if (nString.Length == 4)
             {
                 int nFirstIndex = int.Parse(nString[0].ToString()) * 1000;
 
-                result += newDictionary[nFirstIndex];
+                result += numberToRomanDictionary[nFirstIndex];
 
                 int nSecondIndex = int.Parse(nString[1].ToString()) * 100;
 
-                result += newDictionary[nSecondIndex];
+                result += numberToRomanDictionary[nSecondIndex];
 
                 int nThirdIndex = int.Parse(nString[2].ToString()) * 10;
 
-                result += newDictionary[nThirdIndex];
+                result += numberToRomanDictionary[nThirdIndex];
 
                 int nFourthIndex = int.Parse(nString[3].ToString());
 
-                result += newDictionary[nFourthIndex];
+                result += numberToRomanDictionary[nFourthIndex];
+            }
+
+            return result;
+        }
+
+        //ROMAN NUMERAL TO NUMBER METHODS
+        Dictionary<string, int> romanToNumberDictoinary = new Dictionary<string, int>()
+            {
+                {"", 0 },
+                {"I", 1 },
+                {"II", 2 },
+                {"III", 3 },
+                {"IV", 4 },
+                {"V", 5 },
+                {"VI", 6},
+                {"VII", 7 },
+                {"VIII", 8 },
+                {"IX", 9 },
+                {"X", 10 },
+                {"XX", 20 },
+                {"XXX", 30 },
+                {"XL", 40 },
+                {"L",50},
+                {"LX", 60 },
+                {"LXX", 70 },
+                {"LXXX", 80 },
+                {"XC", 90 },
+                {"C", 100 },
+                {"CC", 200 },
+                {"CCC", 300 },
+                {"CD", 400 },
+                {"D", 500 },
+                {"DC", 600 },
+                {"DCC", 700 },
+                {"DCCC", 800 },
+                {"CM", 900 },
+                {"M", 1000 },
+                {"MM", 2000 },
+                {"MMM", 3000 },
+            };
+        public int ConvertoRomanNumeralsToNumbers(string num)
+        {
+            int result = 0;
+
+            if (num.Length == 1)
+            {
+                result = romanToNumberDictoinary[num];
+            }
+            if (num.Length > 1)
+            {
+                foreach (char x in num)
+                {
+                    string newString = x.ToString();
+                    result += romanToNumberDictoinary[newString];
+                }
+
+                for (int i = 0; i < num.Length - 1; i++)
+                {
+                    if (num[i] == 'I' && num[i + 1] == 'V')
+                    {
+                        result -= 2;
+                    }
+                    if (num[i] == 'I' && num[i + 1] == 'X')
+                    {
+                        result -= 2;
+                    }
+                    if (num[i] == 'X' && num[i + 1] == 'L')
+                    {
+                        result -= 20;
+                    }
+                    if (num[i] == 'X' && num[i + 1] == 'C')
+                    {
+                        result -= 20;
+                    }
+                    if (num[i] == 'C' && num[i + 1] == 'D')
+                    {
+                        result -= 200;
+                    }
+                    if (num[i] == 'C' && num[i + 1] == 'M')
+                    {
+                        result -= 200;
+                    }
+                }
             }
 
             return result;

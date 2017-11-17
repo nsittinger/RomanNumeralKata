@@ -50,5 +50,14 @@ namespace RomanNumerals_TDD
             Assert.AreEqual(true, romanNumerals.ConfirmCorrectNumberOfDigits(123));
             Assert.AreEqual(false, romanNumerals.ConfirmCorrectNumberOfDigits(12345));
         }
+
+        [TestMethod]
+        public void ConfirmRomanNumeralToNumberSingleDigit()
+        {
+            Assert.AreEqual(5, romanNumerals.ConvertoRomanNumeralsToNumbers("V"));
+            Assert.AreEqual(7, romanNumerals.ConvertoRomanNumeralsToNumbers("VII"));
+        }
+
+
     }
 }
