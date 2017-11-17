@@ -104,7 +104,7 @@ namespace RomanNumerals
         }
 
         //ROMAN NUMERAL TO NUMBER METHODS
-        Dictionary<string, int> romanToNumberDictoinary = new Dictionary<string, int>()
+        Dictionary<string, int> romanToNumberDictionary = new Dictionary<string, int>()
             {
                 {"", 0 },
                 {"I", 1 },
@@ -145,7 +145,7 @@ namespace RomanNumerals
 
             if (num.Length == 1)
             {
-                result = romanToNumberDictoinary[num];
+                result = romanToNumberDictionary[num];
             }
             if (num.Length > 1)
             {
