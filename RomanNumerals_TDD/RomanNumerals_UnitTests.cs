@@ -62,5 +62,12 @@ namespace RomanNumerals_TDD
             Assert.AreEqual(10, romanNumerals.ConvertoRomanNumeralsToNumbers("X"));
             Assert.AreEqual(14, romanNumerals.ConvertoRomanNumeralsToNumbers("XIV"));
         }
+
+        [TestMethod]
+        public void ConfirmRomanNumeralToNumberTripleDigits()
+        {
+            Assert.AreEqual(448, romanNumerals.ConvertoRomanNumeralsToNumbers("CDXLVIII"));
+            Assert.AreEqual(900, romanNumerals.ConvertoRomanNumeralsToNumbers("CM"));
+        }
     }
 }
