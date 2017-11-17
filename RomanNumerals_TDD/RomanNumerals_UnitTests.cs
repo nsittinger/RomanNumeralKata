@@ -22,9 +22,7 @@ namespace RomanNumerals_TDD
         public void IfNumberIsTwoDigitsTest()
         {
             Assert.AreEqual("X", romanNumerals.ConvertNumbersToRomanNumerals(10));
-
             Assert.AreEqual("XIV", romanNumerals.ConvertNumbersToRomanNumerals(14));
-
             Assert.AreEqual("XL", romanNumerals.ConvertNumbersToRomanNumerals(40));
         }
 
@@ -58,6 +56,11 @@ namespace RomanNumerals_TDD
             Assert.AreEqual(7, romanNumerals.ConvertoRomanNumeralsToNumbers("VII"));
         }
 
-
+        [TestMethod]
+        public void ConfirmRomanNumeralToNumberDoubleDigits()
+        {
+            Assert.AreEqual(10, romanNumerals.ConvertoRomanNumeralsToNumbers("X"));
+            Assert.AreEqual(14, romanNumerals.ConvertoRomanNumeralsToNumbers("XIV"));
+        }
     }
 }
