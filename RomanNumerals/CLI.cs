@@ -28,15 +28,53 @@ namespace RomanNumerals
         public bool PromptForNumber()
         {
             
-            Console.WriteLine("Please insert a positive number! (Max: 3000)");
-            string answer = Console.ReadLine();
-            int input = 0;
-            bool isNumber = int.TryParse(answer, out input);
+            Console.WriteLine("Please insert a positive number! Either Roman or Arabic Numerals! (Max: 3000)");
+            string stringInput = Console.ReadLine();
+            int intInput = 0;
+            bool isNumber = int.TryParse(stringInput, out intInput);
 
             bool running = true;
             while(running)
             {
-                running = NumberToRomanNumeralMethod(input);
+                if (isNumber == false)
+                {
+                    running = RomanNumeralToNumberMethod(stringInput);
+                }
+                else
+                {
+                    running = NumberToRomanNumeralMethod(intInput);
+                }
+            }
+
+            return running;
+        }
+
+        public bool RomanNumeralToNumberMethod(string input)
+        {
+            bool running = true;
+            int arabicNumeralOutput = romanNumeralModel.ConvertoRomanNumeralsToNumbers(input);
+            bool correctNumberOfDigits = romanNumeralModel.ConfirmCorrectNumberOfDigits(arabicNumeralOutput);
+
+            if (!correctNumberOfDigits)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Incorrect number input");
+                Console.WriteLine();
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine(input + " in Arabic Numerals is " + arabicNumeralOutput);
+                Console.WriteLine();
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+            }
+
+            while (running)
+            {
+                running = RepeatMenu();
             }
 
             return running;

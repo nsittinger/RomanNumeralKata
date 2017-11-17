@@ -141,6 +141,7 @@ namespace RomanNumerals
         public int ConvertoRomanNumeralsToNumbers(string num)
         {
             int result = 0;
+            num = num.ToUpper();
 
             if (num.Length == 1)
             {
