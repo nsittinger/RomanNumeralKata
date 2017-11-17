@@ -152,7 +152,7 @@ namespace RomanNumerals
                 foreach (char x in num)
                 {
                     string newString = x.ToString();
-                    result += romanToNumberDictoinary[newString];
+                    result += romanToNumberDictionary[newString];
                 }
 
                 for (int i = 0; i < num.Length - 1; i++)
